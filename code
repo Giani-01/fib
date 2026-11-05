@@ -1,0 +1,52 @@
+using System.Data.Common;
+
+namespace fibanocicsharp
+{
+    internal class Program
+    {
+       
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter a number for how much you'd like the sequence to repeat itself");
+          
+            int number = Convert.ToInt32(Console.ReadLine());
+            if (number == 0)
+            {
+                Console.WriteLine("enter a number or leave bru");
+
+
+            }
+            else if (number == 1)
+
+            {
+                Console.WriteLine(number++);
+            }
+            else if (number == 2)
+            {
+                Console.WriteLine(number++);
+                Console.WriteLine(number++);
+            }
+            else
+            {
+                int a = 0;
+                int b = 1;
+                int c = 0;
+                Console.WriteLine(a);
+                Console.WriteLine(b);
+                for (int i = 2; i < number; i++)
+                {
+                    c = a + b;
+                    Console.WriteLine(c);
+                    a = b;
+                    b = c;
+                }
+                 
+            }
+
+
+
+
+
+        }
+    }
+}
